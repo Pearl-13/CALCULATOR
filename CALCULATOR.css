@@ -52,51 +52,50 @@ button{
 }
 @media screen and (max-width: 480px) {
      .container{
-    height: 600px;
-    width: 450px; 
+    height: 550px;
+    width: 400px; 
 }
     button {
-        width: 95px;
-        height: 80px;
-        font-size: 35px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
         border-radius: 7px;
     }
     #result {
         height: 180px;
-        width: 100%;
+        width: 245px;
         font-weight: 380;
         font-size: 25px;
     }
     #figures{
-    height: 400px;
-    width: 100%;
+    height: 300px;
+    width: 250px;
     padding: 2px;
-}
+    }
    
 }
 @media (min-width: 481px) and (max-width: 1024px) {
       .container{
-    height: 1000px;
-    width: 850px; 
+    height: 900px;
+    width: 700px; 
     
     }
     button {
-        width: 100px;
+        width: 110px;
         height: 90px;
-        font-size: 50px;
+        font-size: 40px;
         border-radius: 10px;
     }
     #result {
         height: 250px;
-        width: 850px;
+        width: 800px;
         font-weight: 500;
         font-size: 65px;
     }
     #figures{
     height: 600px;
-    width: 850px;
+    width: 805px;
     padding: 5px;
-    justify-content: space-around;
     }
     
 }
