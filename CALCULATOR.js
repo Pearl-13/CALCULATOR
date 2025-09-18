@@ -10,8 +10,6 @@ const equalToSign =
 document.getElementById("equals");
 let result =
 document.getElementById("result");
-const percent =
-document.getElementById("percent");
 numberbtn.forEach((btn) => {
     btn.addEventListener("click", () => {
         result.value += btn.textContent
