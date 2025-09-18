@@ -27,24 +27,33 @@ function insert(value) {
     if (value === "CLEAR") {
         result.value = "";
     } 
-    if (value === "%") {
+    else if (value === ".") {
+        result.value += ".";
+    }
+    else if (value === "%") {
         result.value = 
         eval(result.value/100); 
     }
-    if (value === "⊼") {
+    else if (value === "(") {
+        result.value += "(";
+    }
+    else if (value === ")") {
+        result.value += ")";
+    }
+    else if (value === "⊼") {
         result.value += "⊼";
     }
-    if (value === "cos") {
-        result.value += "cos";
+     else if (value === "cos") {
+        result.value += "cos(";
     }
-     if (value === "sin") {
-        result.value += "sin";
+    else if (value === "sin") {
+        result.value += "sin(";
     }
-     if (value === "tan") {
-        result.value += "tan";
+    else if (value === "tan") {
+        result.value += "tan(";
     }
-     if (value === "log") {
-        result.value += "log";
+    else if (value === "log") {
+        result.value += "log(";
     }
 
     else if (value === "DELETE") {
@@ -56,16 +65,24 @@ function insert(value) {
         try {
             let expression = result.value;
             expression = expression.replace(/⊼/g, "Math.PI");
-            expression = expression.replace(/cos/g, "Math.cos(");
-            expression = expression.replace(/sin/g, "Math.sin(");
-            expression = expression.replace(/tan/g, "Math.tan(");
-            expression = expression.replace(/log/g, "Math.log(");
+            expression =
+             expression.replace(/cos\((.*?)\)/g, (match, p1) =>
+                Math.cos(eval(p1) * Math.PI/180));
+            expression = expression.replace(/sin\((.*?)\)/g,  (match, p1) =>
+                Math.sin(eval(p1) * Math.PI/180));
+            expression = expression.replace(/tan\((.*?)\)/g,  (match, p1) =>
+                Math.tan(eval(p1) * Math.PI/180));
+            expression = expression.replace(/log\((.*?)\)/g,  (match, p1) =>
+                Math.log(eval(p1) * Math.PI/180));
             result.value =
-            eval(expression);
+            eval(expression).toFixed(4);
         } catch {
             result.value = "SYNTAX ERROR";
         }
    } 
+   else{
+    result.value += "";
+   }
    
     
 }
