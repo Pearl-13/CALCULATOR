@@ -64,9 +64,9 @@ button{
     width: 400px; 
 }
     #clear, #equals {
-         display: grid;
-    grid-column: span 2;
-    width: 100px;
+        display: grid;
+        
+        width: 100px;
         font-size: 30px;
     }
     button {
@@ -97,7 +97,7 @@ button{
     }
      #clear, #equals {
         display: grid;
-        grid-column: span 2;
+       
         width: 350px;
         font-size: 60px;
     }
@@ -127,7 +127,7 @@ button{
 }
  #clear, #equals {
         display: grid;
-        grid-column: span 2;
+        
         width: 300px;
         font-size: 90px;
     }
