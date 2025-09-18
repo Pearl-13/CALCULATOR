@@ -9,7 +9,7 @@ document.querySelectorAll(".number");
 const equalToSign =
 document.getElementById("equals");
 let result =
-document.geAtElementById("result");
+document.getElementById("result");
 
 
 numberbtn.forEach((btn) => {
