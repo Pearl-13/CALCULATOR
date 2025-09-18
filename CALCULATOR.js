@@ -50,18 +50,3 @@ expression = expression.replace(/π/g, "Math.PI");
    
 
 }
-function evaluateSign() {
-    let input = result.value;
-    input = 
-    input.replace(/%/g, "/100");
-    input =
-    input.replace(/×/g, "*");
-    input = 
-    input.replace(/⊼/g, "3.142");
-    try {
-        let result = eval(input);
-        result.value = result;
-    } catch (e) {
-        result.value = "SYNTAX ERROR";
-    }
-}
