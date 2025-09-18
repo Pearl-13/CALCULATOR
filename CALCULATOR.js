@@ -24,21 +24,25 @@ operatorbtn.forEach((operatorButton) => {
         result.value += operatorButton.textContent
     })
 });
-const pi = () =>{
-    document.getElementById(value).textContent = Math.PI(Number(eval(result.textContent)));
-}
+
 function insert(value) {
     if (value === "CLEAR") {
         result.value = "";
-    }  
+    } 
+if (value === "%") {
+        result.value = 
+eval(result.value/100);
+    } 
+ 
     else if (value === "DELETE") {
         result.value = 
         result.value.slice(0,-1);
     }
     else if (value === "=") {
-        try {
+        try {let expression = result.value; 
+expression = expression.replace(/π/g, "Math.PI");
             result.value =
-            eval(result.value);
+            eval(expression);
         } catch {
             result.value = "SYNTAX ERROR"
         }
