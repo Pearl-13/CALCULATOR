@@ -42,7 +42,7 @@ expression = expression.replace(/π/g, "Math.PI");
             result.value =
             eval(expression);
         } catch {
-            result.value = "SYNTAX ERROR"
+            result.value = "SYNTAX ERROR";
         }
     }
    
